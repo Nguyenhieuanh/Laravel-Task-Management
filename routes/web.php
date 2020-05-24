@@ -22,13 +22,13 @@ Route::prefix('customer')->group(function () {
 
     Route::get('index', 'CustomerController@index');
 
-    Route::get('create', 'CustomerController@showFormAddCustomer')->name('form.add.customer');
+    Route::get('create', 'CustomerController@create')->name('create.customer');
 
     Route::post('store', 'CustomerController@store')->name('store.customer');
 
-    Route::get('{id}/show', 'CustomerController@showInfoById')->name('info.customer');
+    Route::get('{id}/show', 'CustomerController@edit')->name('edit.customer');
 
-    Route::post('{id}/update', 'CustomerController@update')->name('update.customer');
+    Route::put('{id}/update', 'CustomerController@update')->name('update.customer');
 
-    Route::get('{id}', 'CustomerController@delete')->name('delete.customer');
+    Route::get('{id}', 'CustomerController@destroy')->name('delete.customer');
 });

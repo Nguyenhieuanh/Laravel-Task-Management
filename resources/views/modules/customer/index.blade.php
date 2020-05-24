@@ -25,13 +25,14 @@
                             <td>{{$customer->phone}}</td>
                             <td>{{$customer->email}}</td>
                             <td>
-                                <a href="{{route('info.customer',['id'=>$customer->id])}}">Sửa</a>
-                                | <a href="{{route('delete.customer',['id'=>$customer->id])}}">Xóa</a>
+                                <a href="{{route('edit.customer',['id'=>$customer->id])}}">Sửa</a>
+                                | <a href="{{route('delete.customer',['id'=>$customer->id])}}"
+                                    onclick="confirm('are you sure?')">Xóa</a>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
-                <a class="btn btn-primary" href="{{route('form.add.customer')}}">Add customer</a>
+                <a class="btn btn-primary" href="{{route('create.customer')}}">Add customer</a>
             </div>
         </div>
     </div>
