@@ -4,7 +4,7 @@
     <div class="col-md-8 mx-auto mt-5">
         <div class="card">
             <div class="card-header">
-                <h3>Add Customer</h3>
+                <h3>Edit Customer</h3>
             </div>
             <div class="card-body">
                 <form action="{{route('update.customer',['id'=>$customer->id])}}" method="POST">
