@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('master');
+});
+
 Route::prefix('customer')->group(function () {
     Route::get('/', 'CustomerController@index')->name('list.customer');
 
